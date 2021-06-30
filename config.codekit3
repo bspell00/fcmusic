@@ -97,19 +97,6 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/img\/fth_bg.jpg" : {
-      "ft" : 16384,
-      "iS" : 3052959,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/img\/fth_bg.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/img\/logo.png" : {
       "ft" : 32768,
       "iS" : 32347,
