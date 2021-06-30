@@ -5,7 +5,7 @@
   <meta charset = "UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/mystyles.css">
-  <link rel="stylesheet" href="https://use.typekit.net/prj0gol.css">
+  <link rel="stylesheet" href="https://use.typekit.net/qom0ofw.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald:200,400" rel="stylesheet">    
@@ -35,64 +35,46 @@
 </head>
 <body>
   <section id="header">
-    <video class="desktop-video" autoplay loop >
-      <source src="http://fc-globalwebassets.s3.amazonaws.com/FCMusic/desktopvid.mp4" type="video/mp4">
-      <!-- Your browser does not support HTML5 video. -->
-    </video>
-    <video class="mobile-video" autoplay loop playsinline >
-      <source src="http://fc-globalwebassets.s3.amazonaws.com/FCMusic/mobilevid.mp4" type="video/mp4">
-      <!-- Your browser does not support HTML5 video. -->
-    </video>
+    <div class="info-box">
+      <h1 class="stretch">AVAILABLE NOW</h1>
+      <p class="stretch">the new album from FC Music</p>
+      <a href="https://music.apple.com/us/album/from-the-heart/1570763784"><img src="/img/US-UK_Apple_Music_Badge_RGB.svg"></a>
+      <a href="https://open.spotify.com/album/55uM2e9QRFjvFEyHRelqoq?si=2FygM-xKT32pHDrrzBZPiA&dl_branch=1"><img src="/img/spotify-badge.svg"></a>
+      <a href="https://www.youtube.com/watch?v=mFQzEjIhdtQ&list=OLAK5uy_kzjeZTj09bkLb9Mbk1XGuWNlzqEnIAEUo"><img src="/img/yt_logo_rgb_light.png"></a>
+    </div>
   </section>
-  <div class="header-interior">
-    <img class="logo" src="http://fc-globalwebassets.s3.amazonaws.com/FCMusic/img/fcmusicwhite.png">
-    <img class="album-art" src="http://fc-globalwebassets.s3.amazonaws.com/FCMusic/img/FCM_EP%20Art%20(1).jpg">
-    <h1 class="date-title">HERE I AM</h1>
-    <p>The debut EP from Free Chapel Music<br>
-    <span>Buy or Listen anywhere music is streamed</span></p>
-    <div class="music-icons">
-      <a href="https://itunes.apple.com/us/album/here-i-am-ep/1434139092">
-        <img class="apple-music" src="http://fc-globalwebassets.s3.amazonaws.com/FCMusic/img/Apple_Music_Icon_wht.svg">
-      </a>
-      <a href="spotify:album:1OlPMm7k3CNCMYgn46GONH">
-        <img class="spotify" src="http://fc-globalwebassets.s3.amazonaws.com/FCMusic/img/Spotify_Icon_RGB_White.png">
-      </a>
-      <a href="https://www.youtube.com/watch?v=YQUsv0aXfRA">
-        <img class="youtube" src="http://fc-globalwebassets.s3.amazonaws.com/FCMusic/img/yt_icon_mono_dark.png">
-      </a>
-    </div>
-    <div class="sign-up">
-      <h1>Sign up to receive updates from Free Chapel Music</h1>
-      <div class="mailchimp-form">
-              <!-- Begin MailChimp Signup Form -->
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-        <style type="text/css">
-          #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-          /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-        </style>
-        <div id="mc_embed_signup">
-        <form action="https://freechapel.us18.list-manage.com/subscribe/post?u=b03c05f4b65366d5f3f2e6388&amp;id=7a1d21c4fb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-          
-        <div class="mc-field-group">
-          <label for="mce-EMAIL">Email Address </label>
-          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-        </div>
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b03c05f4b65366d5f3f2e6388_7a1d21c4fb" tabindex="-1" value=""></div>
-            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-            </div>
-        </form>
-        </div>
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-        <!--End mc_embed_signup-->
-      </div>
-    </div>
-    <!-- <i class="material-icons">keyboard_arrow_down</i> -->
-  </div>
+
+
+  <script type="text/javascript">
+    $.fn.strech_text = function(){
+    var elmt          = $(this),
+        cont_width    = elmt.width(),
+        txt           = elmt.html(),
+        one_line      = $('<span class="stretch_it">' + txt + '</span>'),
+        nb_char       = elmt.text().length,
+        spacing       = cont_width/nb_char,
+        txt_width;
+    
+    elmt.html(one_line);
+    txt_width = one_line.width();
+    
+    if (txt_width < cont_width){
+        var  char_width     = txt_width/nb_char,
+             ltr_spacing    = spacing - char_width + (spacing - char_width)/nb_char ; 
+  
+        one_line.css({'letter-spacing': ltr_spacing});
+    } else {
+        one_line.contents().unwrap();
+        elmt.addClass('justify');
+    }
+};
+
+
+$(document).ready(function () {
+    $('.stretch').each(function(){
+        $(this).strech_text();
+    });
+});
+  </script>
 </body>
 </html>
